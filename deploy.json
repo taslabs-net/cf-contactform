@@ -15,6 +15,16 @@
     ]
   },
   "config": {
+    "kv_namespaces": [
+      {
+        "binding": "turnstile_kv",
+        "title": "Turnstile Configuration"
+      },
+      {
+        "binding": "Discord_Urls", 
+        "title": "Discord Webhook URLs"
+      }
+    ],
     "secrets": [
       {
         "name": "mailgunApiKey",
@@ -31,6 +41,26 @@
       {
         "name": "senderEmail",
         "description": "Verified sender email address in Mailgun"
+      }
+    ],
+    "kv_data": [
+      {
+        "binding": "turnstile_kv",
+        "key": "site-key-contactform",
+        "value": "",
+        "description": "Turnstile site key from Cloudflare dashboard"
+      },
+      {
+        "binding": "turnstile_kv", 
+        "key": "secret-key-contactform",
+        "value": "",
+        "description": "Turnstile secret key from Cloudflare dashboard"
+      },
+      {
+        "binding": "Discord_Urls",
+        "key": "cloudflare-contactform",
+        "value": "",
+        "description": "Discord webhook URL (optional)"
       }
     ],
     "vars": {
