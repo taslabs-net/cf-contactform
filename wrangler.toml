@@ -9,13 +9,13 @@ DOMAIN_NAME = "example.com"  # REPLACE WITH YOUR DOMAIN
 # KV Namespaces - will be auto-provisioned by Deploy to Cloudflare
 [[kv_namespaces]]
 binding = "contactform_turnstile_kv"
-id = "contactform_turnstile_kv_id"
-preview_id = "contactform_turnstile_kv_preview_id"
+id = "cf-contactform-turnstile"
+preview_id = "cf-contactform-turnstile-preview"
 
 [[kv_namespaces]]
 binding = "contactform_discord_urls"
-id = "contactform_discord_urls_id"
-preview_id = "contactform_discord_urls_preview_id"
+id = "cf-contactform-discord"
+preview_id = "cf-contactform-discord-preview"
 
 # Secrets (will be configured during deployment):
 # - mailgunApiKey
