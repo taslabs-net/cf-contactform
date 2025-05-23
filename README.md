@@ -16,9 +16,13 @@ A secure contact form built with Cloudflare Workers, featuring Turnstile CAPTCHA
 
 **That's it!** The deploy button will:
 1. ✅ Fork this repository to your GitHub account
-2. ✅ Create required KV namespaces automatically
-3. ✅ Guide you through setting up secrets and configuration
-4. ✅ Deploy your contact form to Cloudflare Workers
+2. ✅ Deploy a basic worker instantly
+3. ✅ Show setup instructions on your deployed site
+
+**After deployment, complete setup:**
+1. Clone your forked repository locally
+2. Run `./setup.sh` to configure everything
+3. Deploy the full contact form with `wrangler deploy`
 
 ## 📋 Required Information
 

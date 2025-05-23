@@ -91,14 +91,22 @@ else
     echo "⏭️ Skipping Discord setup"
 fi
 
+# Update wrangler.toml to use the full worker
+sed -i.bak "s/main = \"worker-basic.js\"/main = \"worker.js\"/g" wrangler.toml
+rm wrangler.toml.bak
+
 echo ""
 echo "🎉 Setup Complete!"
 echo "==================="
 echo ""
+echo "✅ KV namespaces created and configured"
+echo "✅ Secrets stored securely"
+echo "✅ Worker switched to full contact form"
+echo ""
 echo "Next steps:"
-echo "1. Review your wrangler.toml configuration"
-echo "2. Test locally: wrangler dev"
-echo "3. Deploy: wrangler deploy"
+echo "1. Deploy the full contact form: wrangler deploy"
+echo "2. Test at your worker URL"
+echo "3. Optional: Set up custom domain"
 echo ""
 echo "KV Namespace IDs created:"
 echo "  turnstile_kv: $TURNSTILE_KV"
