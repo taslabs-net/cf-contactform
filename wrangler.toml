@@ -1,6 +1,6 @@
 name = "cf-contactform"
 main = "worker.js"
-compatibility_date = "2024-01-01"
+compatibility_date = "2025-05-23"
 
 # Define variables that users will need to configure
 [vars]
