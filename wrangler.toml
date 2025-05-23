@@ -1,0 +1,24 @@
+name = "cf_contactform"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Define variables that users will need to configure
+[vars]
+DOMAIN_NAME = "example.com"  # REPLACE WITH YOUR DOMAIN
+
+# KV Namespaces - will be auto-provisioned by Deploy to Cloudflare
+[[kv_namespaces]]
+binding = "contactform_turnstile_kv"
+id = "contactform_turnstile_kv_id"
+preview_id = "contactform_turnstile_kv_preview_id"
+
+[[kv_namespaces]]
+binding = "contactform_discord_urls"
+id = "contactform_discord_urls_id"
+preview_id = "contactform_discord_urls_preview_id"
+
+# Secrets (will be configured during deployment):
+# - mailgunApiKey
+# - mailgunDomain  
+# - cloudflareEmail
+# - senderEmail
