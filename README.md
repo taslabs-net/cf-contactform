@@ -12,7 +12,7 @@ A secure contact form built with Cloudflare Workers, featuring Turnstile CAPTCHA
 
 ## 🚀 One-Click Deploy to Cloudflare
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/taslabs-net/cf_contactform)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/taslabs-net/cf-contactform)
 
 **That's it!** The deploy button will:
 1. ✅ Fork this repository to your GitHub account
@@ -52,8 +52,8 @@ You'll need these credentials after deployment:
 
 ```bash
 # Clone the repository
-git clone https://github.com/taslabs-net/cf_contactform.git
-cd cf_contactform
+git clone https://github.com/taslabs-net/cf-contactform.git
+cd cf-contactform
 
 # Install Wrangler CLI (if not already installed)
 npm install -g wrangler

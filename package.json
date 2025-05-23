@@ -1,5 +1,5 @@
 {
-  "name": "cf_contactform",
+  "name": "cf-contactform",
   "version": "1.0.0",
   "description": "Cloudflare Worker Contact Form with Turnstile, Mailgun, and Discord integration",
   "main": "worker.js",
@@ -26,7 +26,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/taslabs-net/cf_contactform.git"
+    "url": "https://github.com/taslabs-net/cf-contactform.git"
   },
   "devDependencies": {
     "wrangler": "^4.15.0"

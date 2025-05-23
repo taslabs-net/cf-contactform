@@ -159,7 +159,7 @@ const script = `
               5.625-5.475 5.922.435.375.81 1.096.81 2.21 0 1.595-.015 2.875-.015 3.27
               0 .315.21.69.825.57C20.565 21.795 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
             </svg>
-            <a href="https://github.com/taslabs-net/cf_contactform" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/taslabs-net/cf-contactform" target="_blank" rel="noopener noreferrer">
               Create Your Own
             </a>
           </p>\`;
