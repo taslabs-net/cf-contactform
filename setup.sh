@@ -30,13 +30,13 @@ echo ""
 echo "📦 Creating KV Namespaces..."
 
 # Create KV namespaces and capture IDs
-echo "Creating contactform_turnstile_kv namespace..."
-TURNSTILE_KV=$(wrangler kv:namespace create "contactform_turnstile_kv" --preview false | grep -o 'id = "[^"]*"' | cut -d'"' -f2)
-TURNSTILE_KV_PREVIEW=$(wrangler kv:namespace create "contactform_turnstile_kv" --preview | grep -o 'id = "[^"]*"' | cut -d'"' -f2)
+echo "Creating cf-contactform-turnstile-kv namespace..."
+TURNSTILE_KV=$(wrangler kv:namespace create "cf-contactform-turnstile-kv" --preview false | grep -o 'id = "[^"]*"' | cut -d'"' -f2)
+TURNSTILE_KV_PREVIEW=$(wrangler kv:namespace create "cf-contactform-turnstile-kv" --preview | grep -o 'id = "[^"]*"' | cut -d'"' -f2)
 
-echo "Creating contactform_discord_urls namespace..."
-DISCORD_KV=$(wrangler kv:namespace create "contactform_discord_urls" --preview false | grep -o 'id = "[^"]*"' | cut -d'"' -f2)
-DISCORD_KV_PREVIEW=$(wrangler kv:namespace create "contactform_discord_urls" --preview | grep -o 'id = "[^"]*"' | cut -d'"' -f2)
+echo "Creating cf-contactform-discord-urls-kv namespace..."
+DISCORD_KV=$(wrangler kv:namespace create "cf-contactform-discord-urls-kv" --preview false | grep -o 'id = "[^"]*"' | cut -d'"' -f2)
+DISCORD_KV_PREVIEW=$(wrangler kv:namespace create "cf-contactform-discord-urls-kv" --preview | grep -o 'id = "[^"]*"' | cut -d'"' -f2)
 
 echo ""
 echo "📝 Updating wrangler.toml with KV namespace IDs..."
