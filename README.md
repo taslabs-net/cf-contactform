@@ -10,7 +10,36 @@ A secure contact form built with Cloudflare Workers, featuring Turnstile CAPTCHA
 - 🔒 **Cloudflare Secrets** - Secure credential storage
 - 🗃️ **Cloudflare KV** - Configuration storage
 
-## Quick Deploy to Cloudflare
+## 🚀 One-Click Deploy to Cloudflare
+
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/taslabs-net/cfcontactform1)
+
+**That's it!** The deploy button will:
+1. ✅ Fork this repository to your GitHub account
+2. ✅ Create required KV namespaces automatically
+3. ✅ Guide you through setting up secrets and configuration
+4. ✅ Deploy your contact form to Cloudflare Workers
+
+## 📋 Required Information
+
+Before clicking deploy, gather these credentials:
+
+### Turnstile (Free)
+1. Go to [Cloudflare Dashboard > Turnstile](https://dash.cloudflare.com/?to=/:account/turnstile)
+2. Create a new site with your domain
+3. Copy the **Site Key** and **Secret Key**
+
+### Mailgun (Free tier available)
+1. Sign up at [mailgun.com](https://mailgun.com)
+2. Verify your domain
+3. Get your **API Key** and **Domain** (e.g., `mg.yourdomain.com`)
+4. Set your **recipient email** and **verified sender email**
+
+### Discord (Optional)
+1. Go to Discord Server Settings > Integrations > Webhooks
+2. Create webhook and copy the URL
+
+## Alternative: Manual Deploy
 
 ### Prerequisites
 

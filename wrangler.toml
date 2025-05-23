@@ -11,16 +11,16 @@ DOMAIN_NAME = "example.com"  # REPLACE WITH YOUR DOMAIN
 #   { pattern = "contact.yourdomain.com/*", zone_name = "yourdomain.com" }
 # ]
 
-# KV Namespaces - IDs will be updated by setup script
+# KV Namespaces - Will be created automatically by Deploy to Cloudflare
 [[kv_namespaces]]
 binding = "turnstile_kv"
-id = "YOUR_TURNSTILE_KV_ID"
-preview_id = "YOUR_TURNSTILE_KV_PREVIEW_ID"
+id = ""
+preview_id = ""
 
 [[kv_namespaces]]
 binding = "Discord_Urls"
-id = "YOUR_DISCORD_KV_ID"
-preview_id = "YOUR_DISCORD_KV_PREVIEW_ID"
+id = ""
+preview_id = ""
 
 # Secrets (use wrangler secret put commands):
 # - mailgunApiKey

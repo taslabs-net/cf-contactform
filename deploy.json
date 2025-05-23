@@ -1,0 +1,77 @@
+{
+  "name": "Contact Form with Turnstile",
+  "description": "Secure contact form with Cloudflare Turnstile protection, Mailgun email delivery, and Discord notifications",
+  "repository": "https://github.com/taslabs-net/cfcontactform1",
+  "accountId": "",
+  "compatibilityDate": "2024-01-01",
+  "main": "worker.js",
+  "schemaVersion": 1,
+  "setup": {
+    "commands": [
+      {
+        "command": "npm install",
+        "description": "Install dependencies"
+      }
+    ]
+  },
+  "config": {
+    "kv_namespaces": [
+      {
+        "binding": "turnstile_kv",
+        "title": "Turnstile Configuration"
+      },
+      {
+        "binding": "Discord_Urls", 
+        "title": "Discord Webhook URLs"
+      }
+    ],
+    "secrets": [
+      {
+        "name": "mailgunApiKey",
+        "description": "Your Mailgun API key for sending emails"
+      },
+      {
+        "name": "mailgunDomain",
+        "description": "Your Mailgun domain (e.g., mg.yourdomain.com)"
+      },
+      {
+        "name": "cloudflareEmail",
+        "description": "Email address to receive form submissions"
+      },
+      {
+        "name": "senderEmail",
+        "description": "Verified sender email address in Mailgun"
+      }
+    ],
+    "kv_data": [
+      {
+        "binding": "turnstile_kv",
+        "key": "site-key-contactform",
+        "value": "",
+        "description": "Turnstile site key from Cloudflare dashboard"
+      },
+      {
+        "binding": "turnstile_kv", 
+        "key": "secret-key-contactform",
+        "value": "",
+        "description": "Turnstile secret key from Cloudflare dashboard"
+      },
+      {
+        "binding": "Discord_Urls",
+        "key": "cloudflare-contactform",
+        "value": "",
+        "description": "Discord webhook URL (optional)"
+      }
+    ],
+    "vars": {
+      "DOMAIN_NAME": {
+        "default": "example.com",
+        "description": "Your domain name"
+      }
+    }
+  },
+  "preview": {
+    "command": "wrangler dev",
+    "watch": ["worker.js"]
+  }
+}
