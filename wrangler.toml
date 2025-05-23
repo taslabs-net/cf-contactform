@@ -1,0 +1,29 @@
+name = "cfcontactform1"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Define variables that users will need to configure
+[vars]
+DOMAIN_NAME = "example.com"  # REPLACE WITH YOUR DOMAIN
+
+# Routes configuration - customize during deployment
+# routes = [
+#   { pattern = "contact.yourdomain.com/*", zone_name = "yourdomain.com" }
+# ]
+
+# KV Namespaces - IDs will be updated by setup script
+[[kv_namespaces]]
+binding = "turnstile_kv"
+id = "YOUR_TURNSTILE_KV_ID"
+preview_id = "YOUR_TURNSTILE_KV_PREVIEW_ID"
+
+[[kv_namespaces]]
+binding = "Discord_Urls"
+id = "YOUR_DISCORD_KV_ID"
+preview_id = "YOUR_DISCORD_KV_PREVIEW_ID"
+
+# Secrets (use wrangler secret put commands):
+# - mailgunApiKey
+# - mailgunDomain  
+# - cloudflareEmail
+# - senderEmail

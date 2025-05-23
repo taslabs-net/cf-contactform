@@ -1,0 +1,5 @@
+.DS_Store
+cf_cache_purge-main/
+node_modules/
+.env
+*.log
