@@ -78,8 +78,8 @@ The setup script will guide you through creating KV namespaces, setting up secre
 - `senderEmail`: Verified sender email address in Mailgun
 
 ### KV Store Data
-- **cf-contactform-turnstile-kv**: `site-key-contactform` and `secret-key-contactform`
-- **cf-contactform-discord-urls-kv**: `cloudflare-contactform` (Discord webhook URL)
+- **cf-contactform-turnstile**: `site-key-contactform` and `secret-key-contactform`
+- **cf-contactform-discord**: `cloudflare-contactform` (Discord webhook URL)
 
 ### Variables
 - `DOMAIN_NAME`: Your website domain
