@@ -6,12 +6,14 @@ compatibility_date = "2024-01-01"
 [vars]
 DOMAIN_NAME = "example.com"  # REPLACE WITH YOUR DOMAIN
 
-# KV Namespaces - will be auto-provisioned by Deploy to Cloudflare
+# KV Namespaces - IMPORTANT: Use different names for each namespace!
+# Namespace 1: For Turnstile CAPTCHA keys
 [[kv_namespaces]]
 binding = "contactform_turnstile_kv"
 id = "cf-contactform-turnstile"
 preview_id = "cf-contactform-turnstile-preview"
 
+# Namespace 2: For Discord webhook URLs  
 [[kv_namespaces]]
 binding = "contactform_discord_urls"
 id = "cf-contactform-discord"

@@ -22,6 +22,10 @@ A secure contact form built with Cloudflare Workers, featuring Turnstile CAPTCHA
 
 After deployment, you'll need to configure a few settings in your Cloudflare dashboard:
 
+⚠️ **IMPORTANT**: During deployment, you'll be asked to create 2 KV namespaces. Make sure to give them **different names**:
+- First KV namespace: `cf-contactform-turnstile` (for CAPTCHA keys)
+- Second KV namespace: `cf-contactform-discord` (for Discord webhooks)
+
 ### Post-Deployment Configuration
 
 1. **Set your domain variable**: Go to Workers & Pages > your-worker > Settings > Variables and update `DOMAIN_NAME` to your actual domain
