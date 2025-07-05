@@ -1,0 +1,26 @@
+name = "cf-contactform"
+main = "worker.js"
+compatibility_date = "2025-05-23"
+
+# Define variables that users will need to configure
+[vars]
+DOMAIN_NAME = "example.com"  # REPLACE WITH YOUR DOMAIN
+
+# KV Namespaces - IMPORTANT: Use different names for each namespace!
+# Namespace 1: For Turnstile CAPTCHA keys
+[[kv_namespaces]]
+binding = "contactform_turnstile_kv"
+id = "cf-contactform-turnstile"
+preview_id = "cf-contactform-turnstile-preview"
+
+# Namespace 2: For Discord webhook URLs  
+[[kv_namespaces]]
+binding = "contactform_discord_urls"
+id = "cf-contactform-discord"
+preview_id = "cf-contactform-discord-preview"
+
+# Secrets (will be configured during deployment):
+# - mailgunApiKey
+# - mailgunDomain  
+# - cloudflareEmail
+# - senderEmail

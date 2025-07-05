@@ -1,0 +1,34 @@
+{
+  "name": "cf-contactform",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker Contact Form with Turnstile, Mailgun, and Discord integration",
+  "main": "worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:preview": "wrangler deploy --env preview",
+    "tail": "wrangler tail",
+    "setup": "./setup.sh",
+    "kv:list": "wrangler kv:namespace list",
+    "secrets:list": "wrangler secret list",
+    "test:turnstile": "wrangler kv:key list --binding=contactform_turnstile_kv",
+    "test:discord": "wrangler kv:key list --binding=contactform_discord_urls"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "contact-form",
+    "turnstile",
+    "mailgun",
+    "discord"
+  ],
+  "author": "TAS Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taslabs-net/cf-contactform.git"
+  },
+  "devDependencies": {
+    "wrangler": "^4.15.0"
+  }
+}
